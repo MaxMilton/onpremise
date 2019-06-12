@@ -15,21 +15,21 @@ x-defaults: &defaults
     - redis
     - postgres
     - memcached
-    - smtp
+    # - smtp
   env_file: .env
   environment:
     SENTRY_MEMCACHED_HOST: memcached
     SENTRY_REDIS_HOST: redis
     SENTRY_POSTGRES_HOST: postgres
-    SENTRY_EMAIL_HOST: smtp
+    # SENTRY_EMAIL_HOST: smtp
   volumes:
     - sentry-data:/var/lib/sentry/files
 
 
 services:
-  smtp:
-    restart: unless-stopped
-    image: tianon/exim4
+  # smtp:
+  #   restart: unless-stopped
+  #   image: tianon/exim4
 
   memcached:
     restart: unless-stopped

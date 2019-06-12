@@ -61,3 +61,7 @@
 #   access_key: 'AKIXXXXXX'
 #   secret_key: 'XXXXXXX'
 #   bucket_name: 's3-bucket-name'
+
+mail.backend: 'dummy'
+system.admin-email: 'root@localhost'
+system.url-prefix: 'http://localhost:9000'
